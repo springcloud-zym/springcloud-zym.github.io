@@ -160,6 +160,89 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://springcloud-zym.github.io/2020/10/05/%E7%BB%99%E5%9B%BE%E7%89%87%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="zym">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZymHexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/05/%E7%BB%99%E5%9B%BE%E7%89%87%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/" class="post-title-link" itemprop="url">给图片添加水印</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-10-05 15:59:15 / 修改时间：16:00:48" itemprop="dateCreated datePublished" datetime="2020-10-05T15:59:15+08:00">2020-10-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/05/%E7%BB%99%E5%9B%BE%E7%89%87%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/05/%E7%BB%99%E5%9B%BE%E7%89%87%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 图片添加水印</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> jsonStr 水印文字，json格式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> srcFile 要添加水印的图片</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> descFile 添加水印之后的图片</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">imageRemark</span><span class="params">(String jsonStr, File srcFile, File descFile)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 水印透明度</span></span><br><span class="line">    Float alpha = <span class="number">0.5f</span>;</span><br><span class="line">    <span class="comment">// 水印文字字体</span></span><br><span class="line">    Font font = <span class="keyword">new</span> Font(<span class="string">&quot;宋体&quot;</span>, Font.BOLD, <span class="number">16</span>);</span><br><span class="line">    <span class="comment">// 水印文字颜色 黑色</span></span><br><span class="line">    Color color = <span class="keyword">new</span> Color(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">50</span>);</span><br><span class="line">    <span class="comment">// 给图片添加水印图片的地址</span></span><br><span class="line">    <span class="comment">// 当不需要添加水印图片时将此代码注释，并且将下面的添加水印图片代码注释</span></span><br><span class="line">    ClassPathResource classPathResource = <span class="keyword">new</span> ClassPathResource(<span class="string">&quot;/static/images/x.jpg&quot;</span>);</span><br><span class="line">    InputStream inputStreamImg = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        inputStreamImg = classPathResource.getInputStream();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 解析json水印文字</span></span><br><span class="line">    JSONObject jsonObject = JSON.parseObject(jsonStr);</span><br><span class="line">    String time = (String) jsonObject.get(<span class="string">&quot;time&quot;</span>);</span><br><span class="line">    String address = (String) jsonObject.get(<span class="string">&quot;address&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//读取要添加水印的图片</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 1.源图片</span></span><br><span class="line">        BufferedImage srcImg = ImageIO.read(srcFile);</span><br><span class="line">        BufferedImage buffImg = <span class="keyword">new</span> BufferedImage(srcImg.getWidth(<span class="keyword">null</span>), srcImg.getHeight(<span class="keyword">null</span>), BufferedImage.TYPE_INT_RGB);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.得到画笔对象</span></span><br><span class="line">        Graphics2D g = buffImg.createGraphics();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.设置对线段的锯齿状边缘处理</span></span><br><span class="line">        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,RenderingHints.VALUE_INTERPOLATION_BILINEAR);</span><br><span class="line">        g.drawImage(srcImg.getScaledInstance(srcImg.getWidth(<span class="keyword">null</span>),srcImg.getHeight(<span class="keyword">null</span>),Image.SCALE_SMOOTH),<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//4 设置水印文字</span></span><br><span class="line">        g.setFont(font);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5.设置水印文字透明度</span></span><br><span class="line">        g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,alpha));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6.第一个参数：水印内容， 后面两个参数：文字在图片上的位置坐标（x,y）</span></span><br><span class="line">        <span class="keyword">if</span> (!StringUtils.isEmpty(time))&#123;</span><br><span class="line">            <span class="comment">// 设置水印文字颜色 当前是黑色</span></span><br><span class="line">            g.setColor(color);</span><br><span class="line">            <span class="comment">// 水印文字位置按实际位置调整</span></span><br><span class="line">            g.drawString(time,buffImg.getWidth()/<span class="number">2</span>,buffImg.getHeight()/<span class="number">2</span>);</span><br><span class="line">            <span class="comment">// 重新设置水印颜色为白色 并且移动一个像素位置重新绘制水印文字，这样暂时解决水印文字不是透明的，当水印文字与要添加水印的图片颜色一致时水印看不见 需要一个好的方法使水印文字变成透明</span></span><br><span class="line">            g.setColor(Color.WHITE);</span><br><span class="line">            g.drawString(time,buffImg.getWidth()/<span class="number">2</span>+<span class="number">1</span>,buffImg.getHeight()/<span class="number">2</span>+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!StringUtils.isEmpty(address))&#123;</span><br><span class="line">            <span class="comment">// 设置水印文字颜色 当前是黑色</span></span><br><span class="line">            g.setColor(color);</span><br><span class="line">            <span class="comment">// 水印文字位置按实际位置调整</span></span><br><span class="line">            g.drawString(address,buffImg.getWidth()/<span class="number">2</span>,buffImg.getHeight()/<span class="number">2</span>+<span class="number">10</span>);</span><br><span class="line">            <span class="comment">// 重新设置水印颜色为白色 并且移动一个像素位置重新绘制水印文字，这样暂时解决水印文字不是透明的，当水印文字与要添加水印的图片颜色一致时水印看不见 需要一个好的方法使水印文字变成透明</span></span><br><span class="line">            g.setColor(Color.WHITE);</span><br><span class="line">            g.drawString(address,buffImg.getWidth()/<span class="number">2</span>+<span class="number">1</span>,buffImg.getHeight()/<span class="number">2</span>+<span class="number">10</span>+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,alpha));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 7.获取水印图片</span></span><br><span class="line">        Image image = ImageIO.read(inputStreamImg);</span><br><span class="line">        <span class="comment">// 水印图片的位置 需改进：水印图片应该与源图片的大小是一个比例，而不是固定的</span></span><br><span class="line">        g.drawImage(image,buffImg.getWidth()/<span class="number">2</span>-<span class="number">50</span>,buffImg.getHeight()/<span class="number">2</span>-<span class="number">50</span>,<span class="keyword">null</span>);</span><br><span class="line">        g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 8.释放资源</span></span><br><span class="line">        g.dispose();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 9.生成图片</span></span><br><span class="line">        OutputStream os = <span class="keyword">null</span>;</span><br><span class="line">        os = <span class="keyword">new</span> FileOutputStream(descFile);</span><br><span class="line">        ImageIO.write(buffImg,<span class="string">&quot;JPG&quot;</span>,os);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://springcloud-zym.github.io/2020/10/02/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -317,9 +400,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
